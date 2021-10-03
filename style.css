@@ -5,6 +5,10 @@
         display: none;
     }
 
+    #nav{
+        width: auto;
+    }
+
     #v1{
         width:auto
     }
@@ -13,7 +17,7 @@
         width:auto
     }
 
-    #v2{
+    #v3{
         width:auto
     }
 }
