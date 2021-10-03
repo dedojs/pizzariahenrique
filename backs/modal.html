@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>testecard</title>
+    <style>
+       #logo{
+           width: 100px;
+       }
+
+       .scrollspySite{
+           position: relative;
+           overflow: auto;
+           height: 380px;
+
+       }
+
+       .bg-cinza{
+        color:grey;
+       }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-success bg-gradient">
+
+        <!--<div class="container">-->
+        <img class='ms-3' id='logo' src="./arquivos/logo2.png">    
+        <a class="navbar-brand h1 mb-0 ms-3" href="#">Pizzaria Sabor da Chapada</a>
+
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle='collapse' data-bs-target='#navbarsite'>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ms-2" id="navbarsite">
+
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Perfil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#videos">Vídeos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#siteModal">Promoção</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contatos</a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav me-5">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id='navdrop'>
+                        Social
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="F">Facebook</a>
+                        <a class="dropdown-item" href="I">Instagram</a>
+                        <a class="dropdown-item" href="t">Twitter</a>
+                        <a class="dropdown-item" href="W">WhatsApp</a>
+                    </div>   
+                </li>
+            </ul>
+
+            
+            <form class="form row">
+                <input class="form-control lg ms-4 me-2 col" type="search" placeholder="Buscar...">
+                <button class="btn btn-danger col-auto me-4" type="submit">Ok</button>
+                
+            </form>
+            
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div id='carrosel' class="carousel slide" data-bs-ride='carousel'>
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1" ></button>
+            <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2" ></button>
+        </div>
+
+      
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="bg-success text-light d-flex justify-content-center pgbr-carousel-item align-items-center">
+                <img src="arquivos/banner4.png" class="img-fluid d-block">
+                <!--<div class="carousel-caption d-none d-sm-block">
+                    <h3>Título1</h3>
+                    <p>Texto1</p>
+                </div>-->
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="bg-success text-light d-flex justify-content-center pgbr-carousel-item align-items-center">
+                <img src="arquivos/banner2.png" class="img-fluid d-block">
+                <!--<div class="carousel-caption d-none d-sm-block">
+                    <h3>Título2</h3>
+                    <p>Texto2</p>
+                </div>-->
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="bg-success text-light d-flex justify-content-center pgbr-carousel-item align-items-center">
+                <img src="arquivos/banner3.png" class="img-fluid d-block">
+                <!--<div class="carousel-caption d-none d-sm-block">
+                    <h3>Título3</h3>
+                    <p>Texto3</p>
+                </div>-->
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carrosel" role="button" data-bs-slide="prev">
+            <spam class="carousel-control-prev-icon"></spam>
+            <!--<spam class="sr-only">Anterior</spam>-->
+        </a>
+
+        <a class="carousel-control-next" href="#carrosel" role="button" data-bs-slide="next">
+            <spam class="carousel-control-next-icon"></spam>
+            <!--<spam class="sr-only">Proximo</spam>-->
+            
+        </a>
+    </div>
+
+    <div class='ms-2 me-2'>
+
+        <div class="row">
+
+            <div class="col-12 text-center my-4">
+                <h1 class="display-3">Cardápio</h1>
+                <h1>Pizzas</h1>
+            </div>
+
+        </div>
+
+        <div class="row mb-5">
+
+            <div class="col-sm-3 mb-4">
+
+                <div id="vertical" class="list-group ">
+                    <a class="list-group-item list-group-item-action bg-success text-center" href="#item0"><h4>Sabores</h4></a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item1">1-Cachoeira do Buracão</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item2">2-Cachoeira das Andorinhas</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item3">3-Vale do Pati</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item4">4-Cachoeira dos Cristais</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item5">5-Cachoeira da Fumaça</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item6">6-Cachoeira da Matinha</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item7">7-Cachoeira da Purificação</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item8">8-Poço Azul</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item9">9-Rio Marimbus</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item10">10-Cachoeira da Moça Loira</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item11">11-Corrego das Pedras</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item12">12-Cachoeira dos Funis</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item13">13-Fazenda Pratinha</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item14">14-Cachoeira do Tiburtino</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item15">15-Cachoeira do Herculano</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item16">16-Morro do Pai Inácio</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item17">17-Igatu</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item18">18-Vale do Capão</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item19">19-Poço Encantado</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item20">20-Cachoeira do Ramalho</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item21">21-Cachoeira do Licuri</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item22">22-Cachoeira Águas Claras</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item23">23-Rio Roncador</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item24">24-Rio Mucugezinho</a>
+                    <a class="list-group-item list-group-item-action list-group-item-success" href="#item25">25-Cachoeira das Três Barras</a>                    
+                  </div>
+
+            </div>
+
+            <div id="cardapio" class="col-sm-9 text-center">
+
+                <div data-bs-spy='scroll' data-bs-target='#vertical' data-bs-offset='0' class="scrollspySite" style="height: 1050px;">
+
+                    <div class="row"> 
+
+                        <div class="col-md">
+                
+                            <div class="card ">
+                
+                                <img id='item1' class="card-img-top" src="./arquivos/card1.png">
+                                <div class="card-body">
+                                    <h6 class="card-header bg-success text-center">1- Cachoeira do Buracão</h6>
+                                    <h6 class="card-subtitle text-muted mb-2 mt-2">Ingredientes:</h6>
+                                    <div class="card-text mb-2">Carne seca, mussarela, catupiry</div>
+                                    <div class="card-text mb-2">cebola, orégano e mussarela </div>
+                                </div>
+                                <div>   
+                                    <ul class="list-group list-grroup-flush">
+                                    <li class="list-group-item">    
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                          P (4 fatias) - R$ 28,00
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                          G (8 fatias) - R$ 43,00
+                                        </label>
+                                    </div>
+                                    </li>
+                                    </ul>                   
+                
+                                </div>
+                
+                                <button class="btn btn-danger mt-2 mb-2" type="button">Adicionar</button>
+                                
+                            </div>            
+                
+                        </div>
+                
+                        <div class="col-md">
+                
+                            <div class="card">
+                
+                                <img id='item2' class="card-img-top" src="./arquivos/card2.png">
+                                <div class="card-body">
+                                    <h6 class="card-header bg-success text-center">2- Cachoeira Andorinhas</h6>
+                                    <h6 class="card-subtitle text-muted mb-2 mt-2">Ingredientes:</h6>
+                                    <div class="card-text mb-2">Frango, catupiry</div>
+                                    <div class="card-text mb-2">cebola, orégano e mussarela </div>
+                                </div>
+                                <div>   
+                                    <ul class="list-group list-grroup-flush">
+                                    <li class="list-group-item">    
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                          P (4 fatias) - R$ 22,00
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                          G (8 fatias) - R$ 38,00
+                                        </label>
+                                    </div>
+                                    </li>
+                                    </ul>                   
+                
+                                </div>
+                
+                                <button class="btn btn-danger mt-2 mb-2" type="button">Adicionar</button>
+                                
+                            </div>
+                
+                        </div>
+                
+                        
+                        <div class="col-md">
+                
+                            <div class="card">
+                
+                                <img id='item3'class="card-img-top" src="./arquivos/card3.png">
+                                <div class="card-body">
+                                    <h6 class="card-header bg-success text-center">3- Vale do Pati</h6>
+                                    <h6 class="card-subtitle text-muted mb-2 mt-2">Ingredientes:</h6>
+                                    <div class="card-text mb-2">Tomate seco, rúcula, parmesão</div>
+                                    <div class="card-text mb-2">cebola, orégano e mussarela </div>
+                                </div>
+                                <div>   
+                                    <ul class="list-group list-grroup-flush">
+                                    <li class="list-group-item">    
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                          P (4 fatias) - R$ 25,00
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                          G (8 fatias) - R$ 38,00
+                                        </label>
+                                    </div>
+                                    </li>
+                                    </ul>                   
+                
+                                </div>
+                
+                                <button class="btn btn-danger mt-2 mb-2" type="button">Adicionar</button>
+                                
+                            </div>   
+                
+                        </div>
+                        
+                    </div>
+
+                    <div class="row mt-4"> 
+
+                      <div class="col-md">
+              
+                          <div class="card ">
+              
+                              <img id='item4' class="card-img-top" src="./arquivos/card6.png">
+                              <div class="card-body">
+                                  <h6 class="card-header bg-success text-center">4- Cachoeira dos Cristais</h6>
+                                  <h6 class="card-subtitle text-muted mb-2 mt-2">Ingredientes:</h6>
+                                  <div class="card-text mb-2">Parmesão, catupiry, gorgonzola</div>
+                                  <div class="card-text mb-2">cebola, orégano e mussarela </div>
+                              </div>
+                              <div>   
+                                  <ul class="list-group list-grroup-flush">
+                                  <li class="list-group-item">    
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                      <label class="form-check-label" for="exampleRadios1">
+                                        P (4 fatias) - R$ 25,00
+                                      </label>
+                                    </div>
+                                  </li>
+                                  <li class="list-group-item">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                        G (8 fatias) - R$ 41,00
+                                      </label>
+                                  </div>
+                                  </li>
+                                  </ul>                   
+              
+                              </div>
+              
+                              <button class="btn btn-danger mt-2 mb-2" type="button">Adicionar</button>
+                              
+                          </div>            
+              
+                      </div>
+              
+                      <div class="col-md">
+              
+                          <div class="card">
+              
+                              <img id='item5' class="card-img-top" src="./arquivos/card5.png">
+                              <div class="card-body">
+                                  <h6 class="card-header bg-success text-center">5- Cachoeira da Fumaça</h6>
+                                  <h6 class="card-subtitle text-muted mb-2 mt-2">Ingredientes:</h6>
+                                  <div class="card-text mb-2">Salame, gorgonzola</div>
+                                  <div class="card-text mb-2">cebola, orégano e mussarela </div>
+                              </div>
+                              <div>   
+                                  <ul class="list-group list-grroup-flush">
+                                  <li class="list-group-item">    
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                      <label class="form-check-label" for="exampleRadios1">
+                                        P (4 fatias) - R$ 25,00
+                                      </label>
+                                    </div>
+                                  </li>
+                                  <li class="list-group-item">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                        G (8 fatias) - R$ 41,00
+                                      </label>
+                                  </div>
+                                  </li>
+                                  </ul>                   
+              
+                              </div>
+              
+                              <button class="btn btn-danger mt-2 mb-2" type="button">Adicionar</button>
+                              
+                          </div>
+              
+                      </div>
+              
+                      
+                      <div class="col-md">
+              
+                          <div class="card">
+              
+                              <img id='item6'class="card-img-top" src="./arquivos/card4.png">
+                              <div class="card-body">
+                                  <h6 class="card-header bg-success text-center">6- Cachoeira da Matinha</h6>
+                                  <h6 class="card-subtitle text-muted mb-2 mt-2">Ingredientes:</h6>
+                                  <div class="card-text mb-2">Calabresa</div>
+                                  <div class="card-text mb-2">cebola, orégano e mussarela </div>
+                              </div>
+                              <div>   
+                                  <ul class="list-group list-grroup-flush">
+                                  <li class="list-group-item">    
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                      <label class="form-check-label" for="exampleRadios1">
+                                        P (4 fatias) - R$ 22,00
+                                      </label>
+                                    </div>
+                                  </li>
+                                  <li class="list-group-item">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                      <label class="form-check-label" for="exampleRadios2">
+                                        G (8 fatias) - R$ 38,00
+                                      </label>
+                                  </div>
+                                  </li>
+                                  </ul>                   
+              
+                              </div>
+              
+                              <button class="btn btn-danger mt-2 mb-2" type="button">Adicionar</button>
+                              
+                          </div>   
+              
+                      </div>
+                      
+                  </div>
+
+
+                    
+
+                    
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+    <div class="jumbotron jumbotron-fluid bg-light " id="videos">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4">Vídeos</h1>
+                    <p class="lead">Aqui você encontra diversidade, sabor e agilidade! Saboreie uma deliciosa pizza com sua família no conforto de sua casa! Entregamos em toda cidade</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul id='pillsnav' class="nav nav-pills justify-content-center mb-5" role="tablist">
+                        <li nav-item>
+                            <a class="nav-link active" id="nav-01" data-bs-toggle="pill" href="#nav-item-01">Diversidade</a>
+                        </li>
+                        <li nav-item>    
+                            <a class="nav-link" id="nav-02" data-bs-toggle="pill" href="#nav-item-02">Sabor</a>
+                        </li>
+                        <li nav-item>     
+                            <a class="nav-link" id="nav-03" data-bs-toggle="pill" href="#nav-item-03">Delivery</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="nav-pills-content">
+
+                        <div class="tab-pane fade show active" id="nav-item-01" role="tabpanel">
+                            <div class="row">
+                                <div class="text-center mb-2">
+                                    <p><strong>Aqui na nossa Pizzaria você encontrará diversos e deliciosos sabores!</strong></p>
+                                </div>
+                                <div class="text-center">
+                                    <iframe class="embed-responsive" width="560" height="315" src="https://www.youtube.com/embed/7j9StaYJ2Xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                               
+                            </div>
+
+                        </div>                       
+                        <div class="tab-pane fade" id="nav-item-02" role="tabpanel">
+                            <div class="row">
+                                <div class="text-center mb-2">
+                                    <p><strong>Aqui sua Pizza é feita com os melhores ingredientes e com todo carinho que você e sua família merecem!</strong></p>
+                                </div>
+                                <div class="text-center">
+
+                                    <iframe class="embed-responsive" width="560" height="315" src="https://www.youtube.com/embed/ywrLSeDVH5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-item-03" role="tabpanel">
+                            <div class="row">
+                                <div class="text-center mb-2">
+                                    <p><strong>Peça sua pizza e receba no conforto de sua casa! Entrega rápida e segura!</strong></p>
+                                </div>
+                                <div class="text-center">
+                                    <iframe class="embed-responsive-sm" width="560" height="315" src="https://www.youtube.com/embed/9M2rSCdoehs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div class ="modal fade" id='siteModal' tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Promoção do dia </h5>
+                    <button type="button" class="close" data-bs-dismiss="modal">
+                        <spam>&times;</spam>
+                    </button>
+                </div>
+                <div class="modal-body">                   
+                    <img class="img-fluid"  src="./arquivos/promo.jpeg">       
+
+                </div>
+                <div class="modal-footer">
+                    <button tipe='button' class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+
+
+
+
+    
+    
+ 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

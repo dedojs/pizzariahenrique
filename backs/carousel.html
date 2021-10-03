@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Bootstrap</title>
+    <style>
+       #logo{
+           width: 100px;
+       }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-success bg-gradient">
+
+        <!--<div class="container">-->
+        <img class='ms-3' id='logo' src="./arquivos/logo2.png">    
+        <a class="navbar-brand h1 mb-0 ms-3" href="#">Pizzaria Sabor da Chapada</a>
+
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle='collapse' data-bs-target='#navbarsite'>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ms-2" id="navbarsite">
+
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Perfil</a>
+                </li>
+
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#">Serviços</a>
+                </li> -->
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Depoimentos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contatos</a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav me-5">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id='navdrop'>
+                        Social
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="F">Facebook</a>
+                        <a class="dropdown-item" href="I">Instagram</a>
+                        <a class="dropdown-item" href="t">Twitter</a>
+                        <a class="dropdown-item" href="W">WhatsApp</a>
+                    </div>   
+                </li>
+            </ul>
+
+            
+            <!--<form class="form row">
+                <input class="form-control ms-4 me-2 col" type="search" placeholder="Buscar...">
+                <button class="btn btn-danger col-auto" type="submit">Ok</button>
+                
+            </form> -->
+            
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div id='carrosel' class="carousel slide" data-bs-ride='carousel'>
+
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carossel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carossel" data-bs-slide-to="1" ></li>
+            <li data-bs-target="#carossel" data-bs-slide-to="2" ></li>
+        </ol>
+
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="arquivos/banner4.png" class="img-fluid d-block">
+                <!--<div class="carousel-caption d-none d-sm-block">
+                    <h3>Título1</h3>
+                    <p>Texto1</p>
+                </div>-->
+            </div>
+
+            <div class="carousel-item">
+                <img src="arquivos/banner2.png" class="img-fluid d-block">
+                <!--<div class="carousel-caption d-none d-sm-block">
+                    <h3>Título2</h3>
+                    <p>Texto2</p>
+                </div>-->
+            </div>
+
+            <div class="carousel-item">
+                <img src="arquivos/banner3.png" class="img-fluid d-block">
+                <!--<div class="carousel-caption d-none d-sm-block">
+                    <h3>Título3</h3>
+                    <p>Texto3</p>
+                </div>-->
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carrosel" role="button" data-bs-slide="prev">
+            <spam class="carousel-control-prev-icon"></spam>
+            <!--<spam class="sr-only">Anterior</spam>-->
+        </a>
+
+        <a class="carousel-control-next" href="#carrosel" role="button" data-bs-slide="next">
+            <spam class="carousel-control-next-icon"></spam>
+            <!--<spam class="sr-only">Proximo</spam>-->
+            
+        </a>
+    </div>
+
+    
+    
+ 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
